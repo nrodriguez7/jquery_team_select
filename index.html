@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/team-select.css" rel="stylesheet">
+
+    <title>Real Estate Teams </title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+
+            <h1>jQuery Team Select</h1>
+
+            <p>A jQuery plugin for adding team members (agents) to an input.</p>
+        </div>
+
+        <h2>Usage</h2>
+        <p><strong>1.</strong> Include jQuery and the plugin.</p>
+
+        <pre>
+          <code class="language-html">&lt;script src=&quot;path/to/jquery.js&quot;&gt;&lt;/script&gt;
+          &lt;script src=&quot;path/to/jquery.team-select.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p><strong>2.</strong> Include the plugin styles</p>
+
+        <pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/team-select.css&quot;&gt;</code></pre>
+
+
+        <p><strong>3.</strong> Examples</p>
+
+        <pre><code class="language-js">&lt;textarea id="teamSelector"&gt;&lt;/textarea&gt;</code></pre>
+
+        <pre><code class="language-js">$(document).ready(function() {
+            $('#teamSelector').teamSelect();
+          });</code></pre>
+
+        <div class="row">
+            <textarea id="teamSelector"></textarea>
+        </div>
+
+        <div class="row">
+
+            <br/><br/>
+            <div id="teamSelectorSelected"> </div> <br> To get selectd ids, in the console.
+            <pre><code class="language-js">$( "#teamSelector" ).val()</code></pre>
+
+            <br/><br/>
+
+        </div>
+
+        <p><strong>4.</strong> Example with custom font-size</p>
+
+        <pre><code class="language-js">&lt;input id="teamSelector2" &gt;</code></pre>
+
+        <pre><code class="language-js">$(document).ready(function() {
+        $('#teamSelector2').teamSelect(8);
+      });</code></pre>
+
+
+        <div class="row">
+            <input id="teamSelector2" />
+        </div>
+        <br/><br/>
+        <div id="teamSelector2Selected"> </div>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.team-select.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#teamSelector').teamSelect();
+                $('#teamSelector2').teamSelect(8);
+
+
+                $("#teamSelector").bind("change", function() {
+                    $("#teamSelectorSelected").html('Selectd agents: ' + $("#teamSelector").val());
+
+                });
+
+                $("#teamSelector2").bind("change", function() {
+                    $("#teamSelector2Selected").html('Selectd agents: ' + $("#teamSelector2").val());
+                });
+
+            });
+        </script>
+</body>
+
+</html>

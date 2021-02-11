@@ -1,0 +1,95 @@
+.team-list {
+    display: flex;
+    max-width: 450px;
+    flex-wrap: wrap;
+    width: auto;
+    padding-left: 1rem;
+}
+
+.team-list>.team-select {
+    flex: 50%;
+    padding-left: 1rem;
+}
+
+.team-list>.team-selected {
+    flex: 42%;
+    padding-left: 1rem;
+}
+
+ul[class="listAgent"] {
+    padding-left: 0rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 200px;
+    margin: 0;
+}
+
+.team-selected>label {
+    color: #90a1b5;
+    text-transform: uppercase;
+    float: none !important;
+}
+
+.team-select>label {
+    color: #90a1b5;
+    text-transform: uppercase;
+    float: none !important;
+}
+
+.listAgent>.plussign::after {
+    margin-left: 5px;
+    content: "\002B";
+    display: inline-block;
+    padding: .35em .65em;
+    font-size: .75em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+
+.listAgent>.minussign::after {
+    margin-left: 5px;
+    content: "\002D";
+}
+
+.listAgent>.disabled {
+    background-color: blue;
+    color: green;
+}
+
+.listAgent>li {
+    list-style-type: none;
+    position: relative;
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.listAgent>li.minussign {
+    color: #0f5132;
+    background-color: #d1e7dd;
+}
+
+.listAgent>li.plussign {
+    color: #084298;
+    background-color: #cfe2ff;
+}
+
+.listAgent>li.disabled {
+    color: #636464;
+    background-color: #e5e5e5;
+}
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+
+@media (max-width: 300px) {
+    .team-select,
+    .team-selected {
+        flex: 100%;
+    }
+}

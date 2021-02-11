@@ -1,0 +1,38 @@
+ body {
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     color: #445870;
+     font-family: 'Work Sans', sans-serif;
+     font-size: 14px;
+     font-weight: normal;
+     letter-spacing: -0.25px;
+     margin: 0;
+     padding: 0 18px;
+ }
+ 
+ p {
+     line-height: 1.6;
+     margin: 0 0 1.6em;
+ }
+ 
+ .container {
+     margin: 96px auto 60px;
+     max-width: 40em;
+ }
+ 
+ .header {
+     text-align: center;
+     margin-bottom: 60px;
+ }
+ 
+ @media screen and (min-width: 600px) {
+     .header {
+         padding: 0 18px;
+     }
+ }
+ 
+ .header p {
+     color: #90a1b5;
+     font-size: 18px;
+     margin-bottom: 36px;
+ }
