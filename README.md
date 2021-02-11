@@ -19,14 +19,14 @@ Include the plugin styles
 ```
 
 ```html
- <textarea id="TeamSelector" ></textarea>
+ <textarea id="teamSelector" ></textarea>
 
 ```
 
 
 ```javascript
 $(document).ready(function() {
-  $('#TeamSelector').teamSelect();
+  $('#teamSelector').teamSelect();
 });
 ```
 
@@ -34,6 +34,12 @@ $(document).ready(function() {
 
 ```javascript
 $(document).ready(function() {
-  $('#TeamSelector').teamSelect(8);
+  $('#teamSelector').teamSelect(8);
 });
+```
+
+## Get selected values, in the console.
+
+```javascript
+$( "#teamSelector" ).val()
 ```

@@ -44,51 +44,60 @@
         <div class="row">
             <textarea id="teamSelector"></textarea>
         </div>
-
         <div class="row">
 
             <br/><br/>
-            <div id="teamSelectorSelected"> </div> <br> To get selectd ids, in the console.
-            <pre><code class="language-js">$( "#teamSelector" ).val()</code></pre>
+            <div id="teamSelectorSelected">
+                <br/><br/>
 
-            <br/><br/>
+            </div>
 
-        </div>
 
-        <p><strong>4.</strong> Example with custom font-size</p>
+            <p><strong>4.</strong> Example with custom font-size</p>
 
-        <pre><code class="language-js">&lt;input id="teamSelector2" &gt;</code></pre>
+            <pre><code class="language-js">&lt;input id="teamSelector2" &gt;</code></pre>
 
-        <pre><code class="language-js">$(document).ready(function() {
+            <pre><code class="language-js">$(document).ready(function() {
         $('#teamSelector2').teamSelect(8);
       });</code></pre>
 
 
-        <div class="row">
-            <input id="teamSelector2" />
-        </div>
-        <br/><br/>
-        <div id="teamSelector2Selected"> </div>
-
-        <script src="js/jquery.js"></script>
-        <script src="js/jquery.team-select.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('#teamSelector').teamSelect();
-                $('#teamSelector2').teamSelect(8);
+            <div class="row">
+                <input id="teamSelector2" />
+            </div>
+            <br/><br/>
+            <div id="teamSelector2Selected"> </div>
 
 
-                $("#teamSelector").bind("change", function() {
-                    $("#teamSelectorSelected").html('Selectd agents: ' + $("#teamSelector").val());
+
+            <p><strong>5.</strong> To get selectd ids, in the console.</p>
+            <div class="row">
+
+                <pre><code class="language-js">$( "#teamSelector" ).val()</code></pre>
+
+                <br/><br/>
+
+            </div>
+
+            <script src="js/jquery.js"></script>
+            <script src="js/jquery.team-select.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('#teamSelector').teamSelect();
+                    $('#teamSelector2').teamSelect(8);
+
+
+                    $("#teamSelector").bind("change", function() {
+                        $("#teamSelectorSelected").html('Selectd agents: ' + $("#teamSelector").val());
+
+                    });
+
+                    $("#teamSelector2").bind("change", function() {
+                        $("#teamSelector2Selected").html('Selectd agents: ' + $("#teamSelector2").val());
+                    });
 
                 });
-
-                $("#teamSelector2").bind("change", function() {
-                    $("#teamSelector2Selected").html('Selectd agents: ' + $("#teamSelector2").val());
-                });
-
-            });
-        </script>
+            </script>
 </body>
 
 </html>
